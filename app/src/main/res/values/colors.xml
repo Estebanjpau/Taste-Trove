@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base Colors-->
+    <color name="black">#FF101010</color>
+    <color name="white">#FFF2F2F2</color>
+    <color name="white_off">#FFF</color>
+    <color name="black_off">#000</color>
+    <color name="light_gray">#FFD3D1D8</color>
+    <color name="gray">#FF9EA1B1</color>
+    <color name="dark_gray">#FF424653</color>
+
+    <!-- Base brand -->
+    <color name="primary_brand">#FFFE724C</color>
+    <color name="experimental_brand">#F95529</color>
+
+    <color name="warning_main">#ffa726</color>
+    <color name="error_main">#f44336</color>
+    <color name="success_main">#66bb6a</color>
+
+    <!-- backgrounds -->
+    <color name="light">#F4F2F2</color>
+    <color name="dark">#303E3D</color>
+    <color name="transparent">#00000000</color>
+
+</resources>

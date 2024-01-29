@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Taste Trove</string>
+
+    <!-- Home -->
+    <string name="whats_you_want_cook">What would you like to cook</string>
+    <string name="find_recipe">Taste Trove</string>
+    <string name="featured_recipes">Featured Recipes</string>
+    <string name="popular_cuisines">Popular Cousines</string>
+
+    <!-- Menu items -->
+    <string name="home">Home</string>
+    <string name="favorites">Favorites</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_h_buttonaddfavorites">Actions for Add recipe to favorites</string>
+    <string name="cd_h_imageFeaturedRecipe">Image of the featured recipe</string>
+
+
+</resources>

@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TasteTrove" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="font">@font/sofia_pro_medium</item>
+        <item name="android:statusBarColor">@color/light</item>
+        <item name="android:colorPrimary">@color/primary_brand</item>
+        <item name="android:colorAccent">@color/primary_brand</item>
+        <item name="android:windowBackground">@color/light</item>
+
+    </style>
+
+    <style name="Theme.TasteTrove" parent="Base.Theme.TasteTrove" />
+</resources>
