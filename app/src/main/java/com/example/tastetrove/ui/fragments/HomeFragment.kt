@@ -1,4 +1,4 @@
-package com.example.tastetrove.ui
+package com.example.tastetrove.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -44,6 +44,7 @@ class HomeFragment : Fragment() {
 
         binding.rvFeaturedRestaurants.apply {
             layoutManager = LinearLayoutManager(requireContext())
+            layoutManager
             adapter = homeFeaturedRecipesAdapter
         }
     }

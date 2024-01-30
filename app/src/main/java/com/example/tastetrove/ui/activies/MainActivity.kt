@@ -1,13 +1,15 @@
-package com.example.tastetrove
+package com.example.tastetrove.ui.activies
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.tastetrove.R
 import com.example.tastetrove.databinding.ActivityMainBinding
-import com.example.tastetrove.ui.FavoritesFragment
-import com.example.tastetrove.ui.HomeFragment
+import com.example.tastetrove.ui.fragments.FavoritesFragment
+import com.example.tastetrove.ui.fragments.HomeFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-
 
     lateinit var binding: ActivityMainBinding
 
