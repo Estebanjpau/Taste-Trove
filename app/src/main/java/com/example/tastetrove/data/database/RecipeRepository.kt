@@ -6,6 +6,7 @@ import com.example.tastetrove.data.network.RecipeService
 import com.example.tastetrove.domain.model.Recipe
 import com.example.tastetrove.domain.model.RecipeCategory
 import com.example.tastetrove.domain.model.toDomain
+import com.example.tastetrove.domain.model.toRecipeCategoryList
 import javax.inject.Inject
 
 class RecipeRepository @Inject constructor(
@@ -22,7 +23,7 @@ class RecipeRepository @Inject constructor(
     suspend fun getAllRecipesCategoriesFromApi(): List<RecipeCategory>{
         val response = api.getRecipesCategories()
 
-        return response.map { it.toDomain() }
+        return response.toRecipeCategoryList()
     }
 
     suspend fun getAllRecipesFromDatabase(): List<Recipe>{

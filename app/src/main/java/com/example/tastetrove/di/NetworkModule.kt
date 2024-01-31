@@ -1,6 +1,7 @@
 package com.example.tastetrove.di
 
 import com.example.tastetrove.data.network.RecipeAPI
+import com.example.tastetrove.data.network.RecipeCategoryAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,5 +27,11 @@ object NetworkModule {
     @Provides
     fun provideRecipeAPI(retrofit: Retrofit): RecipeAPI {
         return retrofit.create(RecipeAPI::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideRecipeCategoriesAPI(retrofit: Retrofit): RecipeCategoryAPI {
+        return retrofit.create(RecipeCategoryAPI::class.java)
     }
 }

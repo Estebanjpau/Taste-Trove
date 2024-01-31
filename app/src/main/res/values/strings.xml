@@ -4,7 +4,7 @@
     <!-- Home -->
     <string name="whats_you_want_cook">What would you like to cook</string>
     <string name="find_recipe">Taste Trove</string>
-    <string name="featured_recipes">Featured Recipes</string>
+    <string name="recipes_categories">Recipes Categories</string>
     <string name="popular_cuisines">Popular Cousines</string>
 
     <!-- Menu items -->

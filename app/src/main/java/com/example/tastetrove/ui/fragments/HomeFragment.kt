@@ -20,7 +20,6 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: HomeViewModel by viewModels()
-    private lateinit var homeFeaturedRecipesAdapter: HomeFeaturedRecipesAdapter
     private lateinit var vmRecipesCategoriesAdapter : HomeFeaturedRecipesAdapter
 
     override fun onCreateView(
@@ -37,47 +36,14 @@ class HomeFragment : Fragment() {
 
         vmRecipesCategoriesAdapter = HomeFeaturedRecipesAdapter(emptyList())
 
-        viewModel.listRecipeCategoryModel.observe(viewLifecycleOwner, Observer {
-
-            vmRecipesCategoriesAdapter = HomeFeaturedRecipesAdapter(
-                it ?: emptyList()
-            )
-        })
-
-        homeFeaturedRecipesAdapter = vmRecipesCategoriesAdapter
-        /*
-            listOf(
-                RecipeModel(
-                    "1",
-                    "Arroz con pollo",
-                    "Preparar arroz con pollo es sencillo y delicioso. En una olla grande, sofríe pimientos, ajo y cebolla. Agrega arroz, agua, pollo, verduras y condimentos; cocina hasta que el arroz esté suave. Disfruta de este plato sabroso y nutritivo.",
-                    "https://www.elespectador.com/resizer/31EbdSMLloiIOdtjK_woHmwSXBg=/920x613/filters:quality(60):format(jpeg)/cloudfront-us-east-1.images.arcpublishing.com/elespectador/LDRLW34JWNAPHDQ6I7KOOUJVKI.jpg",
-                    "Arroz, pollo, pimientos, ajo y cebolla",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                ),
-            ),
-        )
-
-         */
-
         binding.rvFeaturedRestaurants.apply {
-            layoutManager = LinearLayoutManager(requireContext())
-            layoutManager
-            adapter = homeFeaturedRecipesAdapter
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            adapter = vmRecipesCategoriesAdapter
         }
+
+        viewModel.listRecipeCategoryModel.observe(viewLifecycleOwner, Observer {
+            vmRecipesCategoriesAdapter.updateList(it ?: emptyList())
+        })
     }
 
     override fun onDestroyView() {
