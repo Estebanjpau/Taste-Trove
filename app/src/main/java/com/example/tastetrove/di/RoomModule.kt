@@ -3,6 +3,7 @@ package com.example.tastetrove.di
 import android.content.Context
 import androidx.room.Room
 import com.example.tastetrove.data.database.RecipeDatabase
+import com.example.tastetrove.data.database.dao.RecipeDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,4 +21,10 @@ object RoomModule {
     @Provides
     fun provideRoom(@ApplicationContext context: Context) =
         Room.databaseBuilder(context, RecipeDatabase::class.java, RECIPE_DATABASE_NAME).build()
+
+    @Provides
+    @Singleton
+        fun provideRecipeDao(database: RecipeDatabase): RecipeDao {
+        return database.getRecipeDao()
+    }
 }

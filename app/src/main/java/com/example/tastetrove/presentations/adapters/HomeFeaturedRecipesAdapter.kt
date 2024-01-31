@@ -5,13 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tastetrove.R
-import com.example.tastetrove.data.Recipe
+import com.example.tastetrove.domain.model.RecipeCategory
 import com.example.tastetrove.presentations.utils.RecyclerDiffUtils
 import com.example.tastetrove.presentations.viewholders.HomeFeaturedRecipesViewHolder
 
-class HomeFeaturedRecipesAdapter(private var list: List<Recipe>) : RecyclerView.Adapter<HomeFeaturedRecipesViewHolder>() {
+class HomeFeaturedRecipesAdapter(private var list: List<RecipeCategory>) : RecyclerView.Adapter<HomeFeaturedRecipesViewHolder>() {
 
-    fun updateList(newList: List<Recipe>){
+    fun updateList(newList: List<RecipeCategory>){
         val recipeDiff = RecyclerDiffUtils(list, newList)
         val result = DiffUtil.calculateDiff(recipeDiff)
         list = newList
